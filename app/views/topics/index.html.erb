@@ -19,7 +19,7 @@
 
   <% @topics.each do |topic| %>
   <tr>
-    <td><%= link_to topic.title, topic %></td>
+  <td><%= link_to topic.title, topic %><br><br><%= button_to 'Read my bio!', topic, method: :get, class: "btn btn-small btn-info" %></td>
     <td><%= pluralize(topic.votes.length, "vote") %></td>
     <td><%= button_to 'Vote now!', votes_path(topic_id: topic.id), method: :post, class: "btn btn-success text-center" %></td>
   </tr>
