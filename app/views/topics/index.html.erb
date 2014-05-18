@@ -1,0 +1,37 @@
+<div class="container"><br>
+  <h1 class="text-center">Kitten Party!</h1><br>
+<h2 class="text-center">Vote for your favorite kitty.</h2><br><br>
+<div class="row fluid text-center"><img src="http://1.media.collegehumor.cvcdn.com/60/65/f683752ebb1eb0cfdf2302400f703cef-k14.jpg" class="img-circle">
+<br><br><br>
+</div>
+
+  <div class="row-fluid">
+<table class="table table-bordered table-striped">
+  <thead>
+    <tr>
+      <th><h2>Kitten Type</h2></th>
+      <th><h2>Votes!</h2></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+
+  <% @topics.each do |topic| %>
+  <tr>
+    <td><%= link_to topic.title, topic %></td>
+    <td><%= pluralize(topic.votes.length, "vote") %></td>
+    <td><%= button_to 'Vote now!', votes_path(topic_id: topic.id), method: :post, class: "btn btn-success text-center" %></td>
+  </tr>
+<% end %>  
+
+</tbody>
+</table>
+</div>
+
+<%= paginate @topics %>
+
+<br>
+
+<%= link_to 'New Topic', new_topic_path %><br><br>
+</div>

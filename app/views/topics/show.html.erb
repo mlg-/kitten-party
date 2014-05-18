@@ -1,0 +1,32 @@
+<div class="container">
+	<p id="notice"><%= notice %></p>
+
+<div class="row-fluid">
+	<div class="span8 offset1">
+<p>
+  <strong>Title:</strong>
+  <%= @topic.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @topic.description %>
+</p>
+
+<p>
+	<strong>Created at:</strong>
+	<%= @topic.created_at %>
+</p>
+
+<p>
+	<strong>Here's a cool picture</strong>
+	<%= image_tag(@topic.img, class: "img img-circle") %>
+</p>
+</div>
+</div>
+
+
+<%= link_to 'Edit', edit_topic_path(@topic) %> |
+<%= link_to 'Back', topics_path %>
+
+</div>

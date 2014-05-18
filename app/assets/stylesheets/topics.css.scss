@@ -1,0 +1,26 @@
+// Place all the styles related to the topics controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+body {
+ font-family: 'Roboto', sans-serif;
+ font-size: 18pt;
+ color: white;
+ background: #ED9F9F; /* Old browsers */
+
+
+}
+
+a:link    { color: #695999 }  /* unvisited links */
+a:visited { color: #695999 }  /* visited links   */
+a:hover   { color: #695999 }  /* user hovers     */
+a:active  { color: #695999 }  /* active links    */
+
+h1 {
+	font-size: 50pt;
+	color: #695999;
+}
+
+h2 {
+	color: white;
+}
